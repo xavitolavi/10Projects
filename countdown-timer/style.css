@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP";
+    margin: 0;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: url('./img/mountains.jpg');
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+h1 {
+    text-align: center;
+    font-weight: 100;
+    font-size: 4rem;
+    margin-top: 7rem;
+}
+
+.countdown-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 10rem;
+}
+
+.big-text {
+    font-size: 5rem;
+    line-height: 1;
+    margin: 0 2rem;
+}
+
+.countdown-element {
+    text-align: center;
+}
+
+.countdown-element span {
+    font-size: 0.8rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
