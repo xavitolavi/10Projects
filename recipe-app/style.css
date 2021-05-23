@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans JP";
+    margin: 0;
+    background: #ECE9E6;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    background: linear-gradient(to bottom, #FFFFFF, #ECE9E6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.mobile-container {
+    background-color: #fff;
+    width: 400px;
+    box-shadow: 0 0 5px #3333331A;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+header input {
+    padding: 0.25rem 1rem;
+    border-radius: 3px;
+    border: none;
+    background-color: #eee;
+    font-family: inherit;
+}
+
+header button {
+    background-color: transparent;
+    color: #aaa;
+    font-size: 1.5rem;
+    border: none;
+    margin-left: 10px;
+}
+
+.fav-container {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    background-color: #efe2f1;
+}
+
+.fav-meals {
+    display: flex;
+    overflow: auto;
+    list-style-type: none;
+    padding: 0;
+}
+
+.fav-meals li {
+    position: relative;
+    margin: 5px;
+    width: 85px;
+}
+
+.fav-meals li img {
+    cursor: pointer;
+    border: 2px solid #ffffff;
+    box-shadow: 0 0 10px 2px #3333331A;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.fav-meals li span {
+    display: inline-block;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 85px;
+}
+
+.fav-meals li .clear {
+    opacity: 0;
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: -0.2rem;
+    right: -0.5rem;
+    font-size: 1.2rem;
+} 
+
+.fav-meals li:hover .clear{
+    cursor: pointer;
+    transition: 0.5s;
+    opacity: 1;
+}
+ 
+.meal {
+    border-radius: 3px;
+    margin: 1.5rem;
+    box-shadow: 0 0 10px 2px #3333331A;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal-header {
+    position: relative;
+}
+
+.meal-header .random {
+    position: absolute;
+    background-color: white;
+    top: 0.7rem;
+    padding: 0.25rem 0.5rem;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.meal-header img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover  ;
+}
+
+.meal-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+.meal-body h4 {
+    margin: 0px ;
+}
+
+.meal-body .fav-btn {
+    background-color: transparent;
+    border: none;
+    color: rgb(196, 190, 190);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.meal-body .fav-btn.active {
+    transition: 1s;
+    color: rebeccapurple;
+}
+
+.popup-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.popup-container.hidden {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
+
+.popup {
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 2rem;
+    max-width: 800px;
+    max-height: 100vh;
+    overflow: auto;
+    width: 100%;
+}
+
+.popup h1 {
+    text-align: center;
+}
+
+.popup .close-popup {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
