@@ -21,11 +21,11 @@ let score = 0;
 const quizData = [
     {
         question: 'Who am I?',
-        a: 'Fanghetti',
+        a: 'Barack Obama',
         b: 'Xavi Florit',
-        c: 'Mad Fax',
-        d: 'All of \'em',
-        answer: 'd'
+        c: 'Homer Simpson',
+        d: 'All of them',
+        answer: 'b'
     },
     {
         question: 'Where does the name Python come from?',
@@ -41,31 +41,23 @@ const quizData = [
         b: 'Style/Designing skills',
         c: 'Problem solving',
         d: 'Communication',
-        answer: 'a'
+        answer: 'c'
     },
     {
-        question: 'Who am I?',
-        a: '10',
-        b: '10',
-        c: '10',
-        d: '10',
-        answer: 'a'
+        question: 'Which is the most used programming language',
+        a: 'Java',
+        b: 'C',
+        c: 'Python',
+        d: 'Javascript',
+        answer: 'b'
     },
     {
-        question: 'Who am I?',
-        a: '10',
-        b: '10',
-        c: '10',
-        d: '10',
-        answer: 'a'
-    },
-    {
-        question: 'Who am I?',
-        a: '10',
-        b: '10',
-        c: '10',
-        d: '10',
-        answer: 'a'
+        question: 'Which OS is the best?',
+        a: 'Mac',
+        b: 'Windows',
+        c: 'Linux',
+        d: 'All of them are fine (mostly)',
+        answer: 'd'
     },
 ]
 
@@ -107,6 +99,7 @@ submit_btn.addEventListener("click", () => {
             loadQuiz();
         } else {
             quiz_container.innerHTML = `<h2 id="finish-screen">All Done!</h2>
+            <span class="final__score">Your score was ` + score + `/ 5</span> 
             <button onclick="location.reload()">Play Again</button>`;
         }
     }

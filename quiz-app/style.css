@@ -19,6 +19,14 @@ body {
     text-align: center;
 }
 
+.final__score {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: #b6b6b6;
+    margin-bottom: 1rem;
+}
+
 .quiz-container {
     background-color: white;
     width: 500px;
